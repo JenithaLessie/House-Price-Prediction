@@ -11,7 +11,7 @@ page_element="""
 }
 </style>
 """
-st.set_page_config(layout="wide")
+#st.set_page_config(layout="wide")
 st.markdown(page_element, unsafe_allow_html=True)
 
 st.markdown(
