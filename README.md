@@ -1,7 +1,7 @@
 ## Surat House Price Prediction - Regression Analysis
-![image](https://github.com/user-attachments/assets/dd30e784-a72d-4cdc-9e0b-4f76adee802c)
-
 (https://www.kaggle.com/datasets/kunjadiyarohit/flats-uncleaned-dataset)
+### Streamlit web app
+![Screenshot 2025-05-16 104530](https://github.com/user-attachments/assets/7f203fd2-b0d5-4c4c-b706-f9ef18f1d272)
 
 ## Dataset Information
 The dataset provided appears to be a collection of real estate listings scraped from MagicBricks for properties in Surat.
@@ -43,6 +43,5 @@ flats-uncleaned-dataset Attribute Information (in order):
 
 ###  r2_score : 0.9098
 
-### Streamlit web app
-![Screenshot 2025-05-16 104530](https://github.com/user-attachments/assets/7f203fd2-b0d5-4c4c-b706-f9ef18f1d272)
+
 
