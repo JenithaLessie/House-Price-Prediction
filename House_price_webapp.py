@@ -75,5 +75,5 @@ with col3:
              
       #apply our pipeline to this input data
       pred=model.predict(new_data)[0]     
-      st.subheader(f" **House price will be Rs {pred:,.2f} Lacs**")
+      st.subheader(f" **House price will be ₹ {pred:,.2f} Lacs**")
         
