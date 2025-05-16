@@ -37,7 +37,7 @@ unsafe_allow_html=True,
 st.header("House Price Prediction")
 model=joblib.load("house_price_model.joblib")
 
-col1, col2, col3 = st.columns([1,2,1])
+col1, col2, col3 = st.columns([1,1,1])
 
 with col1:
           
@@ -62,7 +62,7 @@ with col2:
                         options=['Unfurnished', 'Semi-furnished', 'furnished'], horizontal=True)      
    
 #submit inputs to model
-if st.button("Submit", type="primary"):
+if st.button("Predict", type="primary"):
     #store our data in dataframe for prediction
     new_data=pd.DataFrame({"Address":[Address],
                            "areaWithType" : [areaWithType],
