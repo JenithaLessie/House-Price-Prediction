@@ -11,7 +11,7 @@ page_element="""
 }
 </style>
 """
-#st.set_page_config(layout="wide")
+st.set_page_config(layout="wide")
 st.markdown(page_element, unsafe_allow_html=True)
 
 st.markdown(
@@ -58,22 +58,23 @@ with col2:
     transaction=st.radio(label="**6.Property type** :receipt:", options=['New Property', 'Resale'], horizontal=True)
     status=st.radio(label="**7.Availability of the property**",
                     options=['Ready to Move', 'Still in construction'], horizontal=True)
-    furnishing=st.radio(label="**8.Furnishing type** :chair:",
+with col3:
+  furnishing=st.radio(label="**8.Furnishing type** :chair:",
                         options=['Unfurnished', 'Semi-furnished', 'furnished'], horizontal=True)      
    
-#submit inputs to model
-if st.button("Predict", type="primary"):
-    #store our data in dataframe for prediction
-    new_data=pd.DataFrame({"Address":[Address],
-                           "areaWithType" : [areaWithType],
-                           "square_feet":[square_feet],
-                           "transaction":[transaction],
-                           "status":[status],
-                           "furnishing":[furnishing],
-                           "price_per_sqft":[price_per_sqft],
-                           "BHK":[Bedrooms]})
+  #submit inputs to model
+  if st.button("Predict", type="primary"):
+      #store our data in dataframe for prediction
+      new_data=pd.DataFrame({"Address":[Address],
+                             "areaWithType" : [areaWithType],
+                             "square_feet":[square_feet],
+                             "transaction":[transaction],
+                             "status":[status],
+                             "furnishing":[furnishing],
+                             "price_per_sqft":[price_per_sqft],
+                             "BHK":[Bedrooms]})
              
-    #apply our pipeline to this input data
-    pred=model.predict(new_data)[0]     
-    st.subheader(f" **House price will be Rs {pred:,.2f} Lacs**")
+      #apply our pipeline to this input data
+      pred=model.predict(new_data)[0]     
+      st.subheader(f" **House price will be Rs {pred:,.2f} Lacs**")
         
