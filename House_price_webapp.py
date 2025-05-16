@@ -49,12 +49,11 @@ with col1:
                                 min_value=500, max_value=8000, value=2000)
    
 with col2:
-   price_per_sqft=st.slider(label="**4.Price(sqft) in ₹** ",
-                                   min_value=500, max_value=8000, value=2500)
-     
-    areaWithType=st.radio(label="**5.Area type**",
-                          options=['Carpet Area', 'Super Area'], horizontal=True)
-    transaction=st.radio(label="**6.Property type** :receipt:", options=['New Property', 'Resale'], horizontal=True)
+  price_per_sqft=st.slider(label="**4.Price(sqft) in ₹** ",
+                            min_value=500, max_value=8000, value=2500)
+  areaWithType=st.radio(label="**5.Area type**", 
+                        options=['Carpet Area', 'Super Area'], horizontal=True)
+  transaction=st.radio(label="**6.Property type** :receipt:", options=['New Property', 'Resale'], horizontal=True)
     
 with col3:
   status=st.radio(label="**7.Availability of the property**",
@@ -63,7 +62,7 @@ with col3:
                         options=['Unfurnished', 'Semi-furnished', 'furnished'], horizontal=True)      
    
   #submit inputs to model
-  if st.button("Predict", type="primary"):
+  if st.button("Submit", type="primary"):
       #store our data in dataframe for prediction
       new_data=pd.DataFrame({"Address":[Address],
                              "areaWithType" : [areaWithType],
