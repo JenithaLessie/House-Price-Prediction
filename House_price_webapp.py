@@ -37,7 +37,7 @@ unsafe_allow_html=True,
 st.header("House Price Prediction")
 model=joblib.load("house_price_model.joblib")
 
-col1, col2, col3 = st.columns([1,1,1])
+col1, col2, col3 = st.columns([1,2,1])
 
 with col1:
           
@@ -47,18 +47,18 @@ with col1:
                           (1,2,3,4,5,6))
     square_feet=st.slider(label="**3.Square Feet**",
                                 min_value=500, max_value=8000, value=2000)
-    price_per_sqft=st.slider(label="**4.Price(sqft) in ₹** ",
-                                   min_value=500, max_value=8000, value=2500)
-    
-
+   
 with col2:
-    
+   price_per_sqft=st.slider(label="**4.Price(sqft) in ₹** ",
+                                   min_value=500, max_value=8000, value=2500)
+     
     areaWithType=st.radio(label="**5.Area type**",
                           options=['Carpet Area', 'Super Area'], horizontal=True)
     transaction=st.radio(label="**6.Property type** :receipt:", options=['New Property', 'Resale'], horizontal=True)
-    status=st.radio(label="**7.Availability of the property**",
-                    options=['Ready to Move', 'Still in construction'], horizontal=True)
+    
 with col3:
+  status=st.radio(label="**7.Availability of the property**",
+                    options=['Ready to Move', 'Still in construction'], horizontal=True)
   furnishing=st.radio(label="**8.Furnishing type** :chair:",
                         options=['Unfurnished', 'Semi-furnished', 'furnished'], horizontal=True)      
    
