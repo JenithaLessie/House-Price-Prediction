@@ -42,3 +42,7 @@ flats-uncleaned-dataset Attribute Information (in order):
         streamlit
 
 ###  r2_score : 0.9098
+
+### Streamlit web app
+![Screenshot 2025-05-16 104530](https://github.com/user-attachments/assets/7f203fd2-b0d5-4c4c-b706-f9ef18f1d272)
+
